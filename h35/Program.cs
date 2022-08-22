@@ -19,7 +19,7 @@ return array;
 }
 // 
 
-int[] arr = fillarr(6,1,1000);
+int[] arr = fillarr(123,1,1000);
 Console.WriteLine("Исходный массив :");
 Console.WriteLine(String.Join(", ",arr));
 int n=10;
