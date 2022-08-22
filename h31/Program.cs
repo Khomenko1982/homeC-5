@@ -1,2 +1,25 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Задача 31: Задайте массив из 12 элементов, заполненный случайными числами из промежутка [-9, 9]. Найдите сумму отрицательных и положительных элементов массива.
+// Например, в массиве [3,9,-8,1,0,-7,2,-1,8,-3,-1,6] сумма положительных чисел равна 29, сумма отрицательных равна -20.
+
+int[] arr = new int[12];
+int sumplus=0;
+int summinus=0;
+for ( int i=0; i< arr.Length; i++ ) 
+{
+    arr[i]=new Random().Next(-9,10);
+
+        if (arr[i]>0) // если элемент положительный
+        {
+            sumplus=sumplus+arr[i];
+            //sumplus+=arr[i];
+         }
+         else // если элемент отрицательный
+         {
+            summinus+=arr[i];
+         }
+
+
+}
+Console.WriteLine(String.Join(", ",arr));
+Console.WriteLine($"Сумма положительных элементов массива = {sumplus}");
+Console.WriteLine($"Сумма отрицательных элементов массива = {summinus}");
